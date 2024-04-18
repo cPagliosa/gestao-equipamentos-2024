@@ -4,18 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GestaoEquipamentos.ConsoleApp
+namespace GestaoEquipamentos.ConsoleApp.ModelEquipamento
 {
-    internal class Controller_Menu_Equipamento
+    public class TelaEquipamentos
     {
         //variaveis da classe
         private int id;
-        private Equipamento equi = new Equipamento();
+        private RepositorioEquipamento equi = new RepositorioEquipamento();
 
         //contrutor
-        public Controller_Menu_Equipamento() { }
-
-        //metados
+        public TelaEquipamentos() { }
 
         //responsavel por mostrar o menu
         public void Iniciar()
@@ -32,13 +30,13 @@ namespace GestaoEquipamentos.ConsoleApp
                                 "Qual sua escolha: ");
                 id = Convert.ToInt32(Console.ReadLine());
                 if (id == 5) break;
-                this.Controller(id);
+                this.Controlhe(id);
             }
 
         }
 
         //responsavel por fazer o controlhe de qual opcao o usuario escolheu
-        private void Controller(int id)
+        private void Controlhe(int id)
         {
             switch (id)
             {
@@ -60,7 +58,5 @@ namespace GestaoEquipamentos.ConsoleApp
 
             }
         }
-
-        
     }
 }

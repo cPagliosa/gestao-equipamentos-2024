@@ -1,45 +1,54 @@
-﻿using System;
+﻿using GestaoEquipamentos.ConsoleApp.ModelEquipamento;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GestaoEquipamentos.ConsoleApp
+namespace GestaoEquipamentos.ConsoleApp.ModelPrincipal
 {
-    internal class Controller_Menu_Chamada
+    public class TelaPrincipal
     {
         //variaveis da classe
         private int id;
 
         //contrutor
-        public Controller_Menu_Chamada() { }
+        public TelaPrincipal() { }
 
-        //metado responsavel por mostrar o menu
+
+        //responsavel por mostrar o menu
         public void Iniciar()
         {
             while (true)
             {
                 Console.Clear();
-                Console.Write("**Gestão de Equipamentos **\n\n" +
+                Console.Write("** Gestão de Equipamentos **\n\n" +
                                 "1. Controlhe de Equipamentos\n" +
                                 "2. Controlhe de Chamada\n" +
-                                "3. Sair\n" +
+                                "3. Sair\n\n" +
                                 "Qual sua escolha: ");
                 id = Convert.ToInt32(Console.ReadLine());
                 if (id == 3) break;
-                this.Controller(id);
+                Controller(id);
             }
 
         }
-
+        //responsavel por fazer o controlhe de qual opcao o usuario escolheu
         private void Controller(int id)
         {
             switch (id)
             {
                 case 1:
-
+                    TelaEquipamentos equip = new TelaEquipamentos();
+                    equip.Iniciar();
+                    break;
+                case 2:
+                    Controller_Menu_Chamada chama = new Controller_Menu_Chamada();
+                    chama.Iniciar();
                     break;
             }
         }
+
+
     }
 }
