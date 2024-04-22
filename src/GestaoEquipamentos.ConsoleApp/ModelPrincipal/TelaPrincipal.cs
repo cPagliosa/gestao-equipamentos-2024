@@ -1,4 +1,5 @@
-﻿using GestaoEquipamentos.ConsoleApp.ModelEquipamento;
+﻿using GestaoEquipamentos.ConsoleApp.ModelChamada;
+using GestaoEquipamentos.ConsoleApp.ModelEquipamento;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -43,8 +44,8 @@ namespace GestaoEquipamentos.ConsoleApp.ModelPrincipal
                     equip.Iniciar();
                     break;
                 case 2:
-                    Controller_Menu_Chamada chama = new Controller_Menu_Chamada();
-                    chama.Iniciar();
+                    TelaChamado chamado = new TelaChamado();
+                    chamado.Iniciar();
                     break;
             }
         }

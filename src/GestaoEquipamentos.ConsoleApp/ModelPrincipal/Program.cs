@@ -1,4 +1,5 @@
-﻿using GestaoEquipamentos.ConsoleApp.ModelEquipamento;
+﻿using GestaoEquipamentos.ConsoleApp.ModelChamada;
+using GestaoEquipamentos.ConsoleApp.ModelEquipamento;
 using System.Collections;
 
 namespace GestaoEquipamentos.ConsoleApp.ModelPrincipal
@@ -8,6 +9,7 @@ namespace GestaoEquipamentos.ConsoleApp.ModelPrincipal
         //lista responsavel por guardar a lista de equipamentos
         public static LinkedList<Equipamento> listaEquipamento = new LinkedList<Equipamento>();
         //lista responsavel por guardar a lista de chamadas
+        public static LinkedList<Chamado> listaChamada = new LinkedList<Chamado>();
         static void Main(string[] args)
         {
             while (true)

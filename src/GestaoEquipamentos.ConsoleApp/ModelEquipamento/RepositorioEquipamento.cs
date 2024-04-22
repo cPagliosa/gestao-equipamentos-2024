@@ -56,8 +56,7 @@ namespace GestaoEquipamentos.ConsoleApp.ModelEquipamento
             if (Program.listaEquipamento.Count == 0)
             {
                 Console.WriteLine("Nem um Equipamento cadastrado");
-                Console.Write("enter para continuar");
-                Console.ReadLine();
+                this.Pausa();
             }
 
             Console.WriteLine(
